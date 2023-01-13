@@ -73,12 +73,6 @@ body header .header_search_btn--icon {
   height: 20px;
   width: 20px;
 }
-body header .header_search_btn--icon:hover {
-  opacity: 0.8;
-  scale: 0.8;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
 body .sort {
   display: flex;
   justify-content: center;
