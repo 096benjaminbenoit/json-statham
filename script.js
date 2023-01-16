@@ -76,15 +76,24 @@
          
          // FONCTION POUR QUE LES FILMS SE CREENT DES L'OUVERTURE DE LA PAGE //
          
-        //  displayMovies(movies.slice(0,9));
+         displayMovies(movies.slice(0,9));
 
-        //  window.addEventListener('scroll',()=>{
-        //     console.log("scrolled", window.scrollY) //scrolled from top
-        //     console.log(window.innerHeight) //visible part of screen
-        //     if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
-        //         displayMovies(movies.slice(0,18));
-        //     }
-        // })
+         window.addEventListener('scroll',()=>{
+            console.log("scrolled", window.scrollY) //scrolled from top
+            console.log(window.innerHeight) //visible part of screen
+            if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
+            //    on compte le nombre de fois ou il y a la classe movie card (donc nombre de film )
+                const number = document.querySelectorAll('.movies_card').length
+                
+                // si on a deja affiché tout les films alors ne rien faire 
+                if (number == movies.length){
+                    return
+                }
+                displayMovies(movies.slice(0,number + 9 ));
+                console.log(number)
+
+            }
+        })
           // SLICE = affiche les données d'un tableau //
      })
 
